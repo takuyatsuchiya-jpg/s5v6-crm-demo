@@ -1,0 +1,43 @@
+/* 游ゴシック基準のベースフォント。Tailwindのfont-sansより優先する */
+body {
+  font-family: "游ゴシック", "Yu Gothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
+  color: #1f1f1f;
+}
+
+/* ---- タブ ---- */
+.tab-active {
+  color: #c15f3c;
+  border-bottom: 2px solid #c15f3c;
+  font-weight: 600;
+}
+
+/* ---- プライマリボタン（アクセントカラー） ---- */
+.btn-primary {
+  background-color: #c15f3c;
+  color: #ffffff;
+  border: 1px solid #c15f3c;
+}
+.btn-primary:hover {
+  background-color: #a64f30;
+  border-color: #a64f30;
+}
+
+/* ---- 顧客カード選択時のハイライト ----
+   hover:border-gray-300 より高い詳細度で左ボーダー色を勝たせるため
+   2クラス結合で指定する */
+.customer-card.customer-card-selected {
+  background-color: #fdf2ec;
+  border-left: 3px solid #c15f3c;
+}
+
+/* ---- 商談カード（パイプライン）のステータス別アクセントライン ----
+   スペック: カード左辺に 3px のアクセントライン */
+.deal-card.deal-card-lead {
+  border-left: 3px solid #9ca3af;
+}
+.deal-card.deal-card-proposal {
+  border-left: 3px solid #c15f3c;
+}
+.deal-card.deal-card-won {
+  border-left: 3px solid #16a34a;
+}
